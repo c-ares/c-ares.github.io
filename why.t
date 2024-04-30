@@ -11,14 +11,14 @@ TITLE(Why does c-ares exist?)
 BOXTOP
 <p>
 
- Several years ago we started looking for an asynchronous DNS resolver library
+A couple of decades ago we started looking for an asynchronous DNS resolver library
 to use in <a href="http://curl.haxx.se/libcurl/">libcurl</a>. We found none
 that met our requirements (see below) and started the <a
 href="http://libdenise.sourceforge.net/">libdenise</a> project to rectify.
 
 <p>
  During this work, someone pointed out the <a
-href="ftp://athena-dist.mit.edu/pub/ATHENA/ares">ares</a> library and heureka!
+href="ftp://athena-dist.mit.edu/pub/ATHENA/ares">ares</a> library and eureka!
 This was almost exactly what we were looking for. We started expanding it and
 soon discovered that the ares author wasn't prepared to accept the changes we
 deemed necessary, and so c-ares was born.
@@ -26,10 +26,7 @@ deemed necessary, and so c-ares was born.
 <h2>Requirements</h2>
 SUBTITLE(1. Interface)
 <p>
-  a. Provide both synchronous and asynchronous interfaces.
-<p>
- b. Synchronous interface: Should support common interfaces, such
- as gethostbyname() and getaddrinfo(). (this is not fulfilled)
+ a. Provide both synchronous and asynchronous interfaces.
 <p>
  c. Asynchronous interface: Should be based on non-blocking sockets.
 <p>
@@ -41,14 +38,12 @@ SUBTITLE(2. Queries)
 <p>
  b. Must support hostname and address lookup (A and PTR types)
 <p>
- c. Could support other types of lookup (e.g. CNAME and MX types)
+ c. Must support other types of lookup (e.g. CNAME and MX types)
 <p>
 
 SUBTITLE(3. Integration)
 <p>
- a. Should integrate easily with applications, and particularly,
- their mainloop implementations. (partly fulfilled, still a little too
- attached to select() )
+ a. Should integrate easily with applications.
 <p>
 
 SUBTITLE(4. Portability)
@@ -60,6 +55,10 @@ SUBTITLE(4. Portability)
 <p>
  c. Should not rely on hardware or compiler specifics, e.g. endianess
     and size/alignment of primitive types.
+<p>
+ d. Should be no worse, and optimally better than the system's native resolver.
+    (still work to do on this, such as supporting mDNS, DoH, and domain-specific
+    queries)
 <p>
 SUBTITLE(5. Multi-threading)
 <p>

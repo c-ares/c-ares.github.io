@@ -17,7 +17,8 @@ resolves)
 
 <p>
  C89 compatibility, <a href="/license.html">MIT licensed</a>, builds for and
- runs on POSIX, Windows, Netware, Android and many more operating systems.
+ runs on Linux, FreeBSD, OpenBSD, MacOS, Solaris, AIX, Windows, Android, iOS
+ and many more operating systems.
 
 SUBTITLE(Download)
 <p>
