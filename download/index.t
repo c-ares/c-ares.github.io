@@ -16,6 +16,9 @@ BOXTOP
 
 <p>
 
+ <a href="/download/c-ares-1.29.0.tar.gz">c-ares 1.29.0</a> (24-may-2024)
+<a href="/download/c-ares-1.29.0.tar.gz.asc">GPG</a> <a href="/changelog.html#1_29_0">Changelog</a>
+<br>
  <a href="/download/c-ares-1.28.1.tar.gz">c-ares 1.28.1</a> (30-mar-2024)
 <a href="/download/c-ares-1.28.1.tar.gz.asc">GPG</a> <a href="/changelog.html#1_28_1">Changelog</a>
 <br>
