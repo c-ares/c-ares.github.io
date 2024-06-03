@@ -73,8 +73,8 @@ BOXTOP
  <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_17_1/c-ares-1.17.1.tar.gz">c-ares 1.17.1</a> (19-nov-2020)
 <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_17_1/c-ares-1.17.1.tar.gz.asc">GPG</a> <a href="/changelog.html#1_17_1">Changelog</a>
 <br>
- <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_17_0/c-ares-1.17.0.tar.gz">c-ares 1.17.0</a> (16-nov-2020)
-<a href="https://github.com/c-ares/c-ares/releases/download/cares-1_17_0/c-ares-1.17.0.tar.gz.asc">GPG</a> <a href="/changelog.html#1_17_0">Changelog</a>
+ <a href="https://github.com/c-ares/c-ares/releases/download/c-ares-1_17_0/c-ares-1.17.0.tar.gz">c-ares 1.17.0</a> (16-nov-2020)
+<a href="https://github.com/c-ares/c-ares/releases/download/c-ares-1_17_0/c-ares-1.17.0.tar.gz.asc">GPG</a> <a href="/changelog.html#1_17_0">Changelog</a>
 <br>
 <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_16_1/c-ares-1.16.1.tar.gz">c-ares 1.16.1</a> (11-may-2020)
 <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_16_1/c-ares-1.16.1.tar.gz.asc">GPG</a> <a href="/changelog.html#1_16_1">Changelog</a>
