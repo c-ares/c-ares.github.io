@@ -3,7 +3,7 @@ name: Deploy Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: [$default-branch]
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,7 +32,7 @@ jobs:
       - name: Checkout roffit
         uses: actions/checkout@v4
         with:
-          repository: "https://github.com/bagder/roffit"
+          repository: "bagder/roffit"
           path: roffit
       - name: Build and Install roffit
         run: |
@@ -41,7 +41,7 @@ jobs:
       - name: Checkout fcpp
         uses: actions/checkout@v4
         with:
-          repository: "https://github.com/bagder/fcpp"
+          repository: "bagder/fcpp"
           path: fcpp
       - name: Build and Install fcpp
         run: |
