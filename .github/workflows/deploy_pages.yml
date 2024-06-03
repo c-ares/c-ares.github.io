@@ -60,7 +60,7 @@ jobs:
           make
       - name: Clean up files we don't want deployed
         run: |
-          rm -rf ares-cvs fcpp roffit *.t *.md Makefile download/Makefile download/*.t
+          rm -rf ares-cvs fcpp roffit .deps *.gen *.raw *.t *.md Makefile download/Makefile download/*.t
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
