@@ -47,12 +47,20 @@ jobs:
         run: |
           cd fcpp
           sudo make install
+      - name: Checkout source needed to build docs
+        uses: actions/checkout@v4
+        with:
+          repository: "c-ares/c-ares"
+          path: ares-cvs
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Build pages
         run: |
           make
+      - name: Clean up files we don't want deployed
+        run: |
+          rm -rf ares-cvs fcpp roffit *.t *.md Makefile download/Makefile download/*.t
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
