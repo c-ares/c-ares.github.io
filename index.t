@@ -22,8 +22,8 @@ resolves)
 
 SUBTITLE(Download)
 <p>
- <a href="/download/c-ares-1.29.0.tar.gz">c-ares 1.29.0</a> (24-may-2024)
-<a href="/download/c-ares-1.29.0.tar.gz.asc">GPG</a> <a href="/changelog.html">Changelog</a>
+ <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_29_0/c-ares-1.29.0.tar.gz">c-ares 1.29.0</a> (24-may-2024)
+<a href="https://github.com/c-ares/c-ares/releases/download/cares-1_29_0/c-ares-1.29.0.tar.gz.asc">GPG</a> <a href="/changelog.html">Changelog</a>
 <p>
  You can also <a href="download/">download old packages</a>
 
