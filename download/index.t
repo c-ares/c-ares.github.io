@@ -12,10 +12,20 @@ BOXTOP
 <p>
  These packages are provided as a service to whoever might find these
  useful. Please consider always getting and using the most recent
- version. We're a small project, we can't provide "support" for old releases.
+ version, we have maintained API and ABI compatibility between releases since
+ v1.7.0 in 2009.  We do not create releases for bugfixes or security fixes
+ for prior versions, however, we do maintain some prior version
+ <a href="https://github.com/c-ares/c-ares/branches">branches</a> where we
+ backport fixes for about a year from the release of that version.
 
 <p>
+ Valid PGP / GPG signing keys for packages are:
+ <ul>
+   <li><a href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x27edeaf22f3abceb50db9a125cc908fdb71e12c2">Daniel Stenberg &lt;daniel@haxx.se&gt; - 27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2</a></li>
+   <li><a href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xda7d64e4c82c6294cb73a20e22e3d13b5411b7ca">Brad House &lt;brad@brad-house.com&gt; - DA7D64E4C82C6294CB73A20E22E3D13B5411B7CA</a></li>
+ </ul>
 
+<p>
  <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_29_0/c-ares-1.29.0.tar.gz">c-ares 1.29.0</a> (24-may-2024)
 <a href="https://github.com/c-ares/c-ares/releases/download/cares-1_29_0/c-ares-1.29.0.tar.gz.asc">GPG</a> <a href="/changelog.html#1_29_0">Changelog</a>
 <br>
