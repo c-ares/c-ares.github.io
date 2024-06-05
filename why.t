@@ -14,9 +14,9 @@ BOXTOP
 A couple of decades ago <a href="https://daniel.haxx.se/">Daniel Stenberg</a>
 started looking for an asynchronous DNS resolver library to use in
 <a href="http://curl.haxx.se/libcurl/">libcurl</a>. Through this process,
-someone pointed out the
-<a href="ftp://athena-dist.mit.edu/pub/ATHENA/ares">ares</a>
-library and eureka! This was almost exactly what he was looking for, for use in
+someone pointed out the ares library
+(<a href="https://github.com/mit-athena/libares/">archived here</a>)
+and eureka! This was almost exactly what he was looking for, for use in
 libcurl. We started expanding it and soon discovered that the ares author wasn't
 prepared to accept the changes we deemed necessary, and so c-ares was born.
 
