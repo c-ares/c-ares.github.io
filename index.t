@@ -14,14 +14,21 @@ BOXTOP
 <p>
  <b>c-ares</b> is a modern DNS (stub) resolver library, written in C. It provides
  interfaces for asynchronous queries while trying to abstract the intricacies of
- the underlying DNS protocol.
+ the underlying DNS protocol.  It was originally intended for applications which
+ need to perform DNS queries without blocking, or need to perform multiple DNS
+ queries in parallel.
 
 <p>
  One of the goals of c-ares is to be a better DNS resolver than is provided by
- your system, regardless of which system you use.  c-ares will build with any
- C89 compiler, is <a href="/license.html">MIT licensed</a>, and runs on
- Linux, FreeBSD, OpenBSD, MacOS, Solaris, AIX, Windows, Android, iOS
- and many more operating systems.
+ your system, regardless of which system you use.  We recommend using
+ the c-ares library in all network applications even if the initial goal of
+ asynchronous resolution is not necessary to your application.
+
+<p>
+ c-ares will build with any C89 compiler, is
+ <a href="/license.html">MIT licensed</a>, which makes it suitable for both free
+ and commercial software. c-ares runs on Linux, FreeBSD, OpenBSD, MacOS, Solaris,
+ AIX, Windows, Android, iOS and many more operating systems.
 
 <p>
  c-ares has a strong focus on security, implementing safe parsers and data
