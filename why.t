@@ -11,64 +11,57 @@ TITLE(Why does c-ares exist?)
 BOXTOP
 <p>
 
-A couple of decades ago we started looking for an asynchronous DNS resolver library
-to use in <a href="http://curl.haxx.se/libcurl/">libcurl</a>. We found none
-that met our requirements (see below) and started the <a
-href="http://libdenise.sourceforge.net/">libdenise</a> project to rectify.
+A couple of decades ago <a href="https://daniel.haxx.se/">Daniel Stenberg</a>
+started looking for an asynchronous DNS resolver library to use in
+<a href="http://curl.haxx.se/libcurl/">libcurl</a>. Through this process,
+someone pointed out the
+<a href="ftp://athena-dist.mit.edu/pub/ATHENA/ares">ares</a>
+library and eureka! This was almost exactly what he was looking for, for use in
+libcurl. We started expanding it and soon discovered that the ares author wasn't
+prepared to accept the changes we deemed necessary, and so c-ares was born.
 
-<p>
- During this work, someone pointed out the <a
-href="ftp://athena-dist.mit.edu/pub/ATHENA/ares">ares</a> library and eureka!
-This was almost exactly what we were looking for. We started expanding it and
-soon discovered that the ares author wasn't prepared to accept the changes we
-deemed necessary, and so c-ares was born.
+Over the course of the last couple of decades, the code may no longer resemble
+the original ares code, but the public API is still heavily influenced by it
+as we strive to maintain API and ABI compatibility across versions.
 
 <h2>Requirements</h2>
+
 SUBTITLE(1. Interface)
-<p>
- a. Provide both synchronous and asynchronous interfaces.
-<p>
- c. Asynchronous interface: Should be based on non-blocking sockets.
-<p>
-  d. Must not use signals as a mean of communication.
-<p>
+<ul>
+  <li>Asynchronous interface should be based on non-blocking sockets.</li>
+  <li>Must not use signals as a mean of communication.</li>
+</ul>
+
 SUBTITLE(2. Queries)
-<p>
- a. Must support both IPv4 and IPv6 addresses.
-<p>
- b. Must support hostname and address lookup (A and PTR types)
-<p>
- c. Must support other types of lookup (e.g. CNAME and MX types)
-<p>
+<ul>
+ <li>Must support both IPv4 and IPv6 addresses.</li>
+ <li>Must support hostname and address lookup (A and PTR types)</li>
+ <li>Must support other types of lookup (e.g. CNAME and MX types)</li>
+</ul>
 
 SUBTITLE(3. Integration)
-<p>
- a. Should integrate easily with applications.
-<p>
+<ul>
+ <li>Should integrate easily with applications.</li>
+</ul>
 
 SUBTITLE(4. Portability)
-<p>
- a. Must be portable to most commonly used platforms (Linux, Solaris,
-    Win32, etc).
-<p>
- b. Should be portable to as many platforms as possible.
-<p>
- c. Should not rely on hardware or compiler specifics, e.g. endianess
-    and size/alignment of primitive types.
-<p>
- d. Should be no worse, and optimally better than the system's native resolver.
-    (still work to do on this, such as supporting mDNS, DoH, and domain-specific
-    queries)
-<p>
+<ul>
+ <li>Must be portable to most commonly used platforms (Linux, Solaris, Win32, etc).</li>
+ <li>Should be portable to as many platforms as possible.</li>
+ <li>Should not rely on hardware or compiler specifics, e.g. endianess and size/alignment of primitive types.</li>
+ <li>Should be no worse, and optimally better than the system's native resolver.</li>
+</ul>
+
 SUBTITLE(5. Multi-threading)
-<p>
- a. Must not require multi-threading.
-<p>
- b. Must work correctly in multi-threaded environments.
+<ul>
+ <li>Must not require multi-threading.</li>
+ <li>Must work correctly in multi-threaded environments.</li>
+</ul>
 
 SUBTITLE(6. Licensing)
-<p>
- a. Must allow use in Open Source and proprietary projects.
+<ul>
+ <li>Must allow use in Open Source and proprietary projects.</li>
+</ul>
 
 BOXBOT
 
