@@ -9,8 +9,8 @@
 
 TITLE(Why does c-ares exist?)
 BOXTOP
-<p>
 
+<p>
 A couple of decades ago <a href="https://daniel.haxx.se/">Daniel Stenberg</a>
 started looking for an asynchronous DNS resolver library to use in
 <a href="http://curl.haxx.se/libcurl/">libcurl</a>. Through this process,
@@ -20,11 +20,12 @@ library and eureka! This was almost exactly what he was looking for, for use in
 libcurl. We started expanding it and soon discovered that the ares author wasn't
 prepared to accept the changes we deemed necessary, and so c-ares was born.
 
+<p>
 Over the course of the last couple of decades, the code may no longer resemble
 the original ares code, but the public API is still heavily influenced by it
 as we strive to maintain API and ABI compatibility across versions.
 
-<h2>Requirements</h2>
+<h2>Resolver Library Requirements</h2>
 
 SUBTITLE(1. Interface)
 <ul>
