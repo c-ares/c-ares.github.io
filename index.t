@@ -52,15 +52,22 @@ SUBTITLE(Download)
 
 SUBTITLE(Communication)
 
-<p> Discussions around c-ares, its use and its development, are held on the <a
- href="https://lists.haxx.se/mailman/listinfo/c-ares">c-ares mailing
- list</a>. Please, do not mail volunteers privately about c-ares.  <a
- href="https://lists.haxx.se/pipermail/c-ares/">Mailing list archive</a>
+<p>
+ Discussions around c-ares, its use and its development, are held on
+ <a href="https://github.com/c-ares/c-ares/discussions/categories/q-a">c-ares GitHub Discussions</a>
+ or the
+ <a href="https://lists.haxx.se/mailman/listinfo/c-ares">c-ares mailing
+ list</a>. Please, do not mail volunteers privately about c-ares.
+ <a href="https://lists.haxx.se/pipermail/c-ares/">Mailing list archive</a>
 
-<p> Security vulnerabilities are treated according to our <a
- href="security.html">security procedure</a>, please email c-ares-security at
- haxx.se if you suspect one. <a href="vulns.html">Previous security
- vulnerabilities</a>.
+<p>
+ Issues should be reported to our <a href="https://github.com/c-ares/c-ares/issues">c-ares GitHub Issues</a> page.
+
+<p>
+ Security vulnerabilities are treated according to our
+ <a href="security.html">security procedure</a>, please email c-ares-security at
+ haxx.se if you suspect one.
+ <a href="vulns.html">Previous security vulnerabilities</a>.
 
 
 SUBTITLE(Source code)
