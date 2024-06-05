@@ -71,6 +71,9 @@ security.html: security.t $(MAINPARTS) security.gen
 security.gen: $(SRCDIR)/SECURITY.md
 	$(MARKDOWN) < $< > $@
 
+license.gen: $(SRCDIR)/LICENSE.md
+	$(MARKDOWN) < $< > $@
+
 adv_20160929.html: adv_20160929.t $(MAINPARTS) adv_20160929.gen
 	$(ACTION)
 adv_20160929.gen: adv_20160929.md
@@ -101,7 +104,7 @@ docs.gen: $(MANPAGES)
 docs.html: docs.t docs.gen $(MAINPARTS)
 	$(ACTION)
 
-license.html: license.t $(MAINPARTS)
+license.html: license.t $(MAINPARTS) license.gen
 	$(ACTION)
 
 mailhead.html: mailhead.t $(MAINPARTS)
