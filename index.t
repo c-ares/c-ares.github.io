@@ -27,8 +27,8 @@ SUBTITLE(Download)
 <p>
  Valid PGP / GPG signing keys for packages are:
  <ul>
-   <li><a href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x27edeaf22f3abceb50db9a125cc908fdb71e12c2">Daniel Stenberg &lt;daniel@haxx.se&gt; - 27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2</a></li>
-   <li><a href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xda7d64e4c82c6294cb73a20e22e3d13b5411b7ca">Brad House &lt;brad@brad-house.com&gt; - DA7D64E4C82C6294CB73A20E22E3D13B5411B7CA</a></li>
+   <li>Daniel Stenberg &lt;daniel@haxx.se&gt; - <a href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x27edeaf22f3abceb50db9a125cc908fdb71e12c2">27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2</a></li>
+   <li>Brad House &lt;brad@brad-house.com&gt; - <a href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xda7d64e4c82c6294cb73a20e22e3d13b5411b7ca">DA7D64E4C82C6294CB73A20E22E3D13B5411B7CA</a></li>
  </ul>
 <p>
  You can also <a href="download/">download old packages</a>
