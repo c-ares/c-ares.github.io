@@ -12,13 +12,30 @@ BOXTOP
 <center><img width=480 src="cares-big.png"></center>
 
 <p>
- <b>c-ares</b> is a C library for asynchronous DNS requests (including name
-resolves)
+ <b>c-ares</b> is a modern DNS (stub) resolver library, written in C. It provides
+ interfaces for asynchronous queries while trying to abstract the intricacies of
+ the underlying DNS protocol.
 
 <p>
- C89 compatibility, <a href="/license.html">MIT licensed</a>, builds for and
- runs on Linux, FreeBSD, OpenBSD, MacOS, Solaris, AIX, Windows, Android, iOS
+ One of the goals of c-ares is to be a better DNS resolver than is provided by
+ your system, regardless of which system you use.  c-ares will build with any
+ C89 compiler, is <a href="/license.html">MIT licensed</a>, and runs on
+ Linux, FreeBSD, OpenBSD, MacOS, Solaris, AIX, Windows, Android, iOS
  and many more operating systems.
+
+<p>
+ c-ares has a strong focus on security, implementing safe parsers and data
+ builders used throughout the code, thus avoiding many of the common pitfalls
+ of other C libraries.  Through automated testing with our extensive testing
+ framework, c-ares is constantly validated with a range of static and dynamic
+ analyzers, as well as being constantly fuzzed by
+ <a href="https://github.com/google/oss-fuzz">OSS Fuzz</a>.
+
+<p>
+ While c-ares has been around for over 20 years, it has been actively maintained
+ both in regards to the latest DNS RFCs as well as updated to follow the latest
+ best practices in regards to C coding standards.
+
 
 SUBTITLE(Download)
 <p>
@@ -59,23 +76,24 @@ href="https://github.com/c-ares/c-ares">github</a>.
 
 SUBTITLE(Who is c-ares?)
 
-<p> Contributions have been made by <a
-href="https://github.com/c-ares/c-ares/blob/master/AUTHORS">these friendly
-people</a>.
+<p>
+ Contributions have been made by
+ <a href="https://github.com/c-ares/c-ares/blob/master/AUTHORS">these friendly people</a>.
 
-<p> c-ares is being used by <a
-href="https://curl.haxx.se/libcurl/">libcurl</a>, <a
-href="https://www.unrealircd.com/">UnreadlIRCd</a>, <a
-href="http://www.bzflag.org/">BZFlag</a>, <a
-href="http://xymon.sourceforge.net/">Xymon</a>,
-<a href="http://www.25thandclement.com/~william/projects/libevnet.html">libevnet</a>,
-<a href="http://glite.web.cern.ch/glite/">gLite</a>,
-<a href="https://aria2.github.io/">aria2</a>,
-<a href="http://sipsak.org/">sipsak</a>,
-<a href="http://secondlife.com/">Second Life</a>,
-<a href="https://www.wireshark.org/">Wireshark</a>,
-<a href="https://nodejs.org/">node.js</a>
-<a href="https://arrow.apache.org/">Apache Arrow</a>
+<p>
+ c-ares is being used by
+ <a href="https://curl.haxx.se/libcurl/">libcurl</a>,
+ <a href="https://www.wireshark.org/">Wireshark</a>,
+ <a href="https://nodejs.org/">NodeJS</a>,
+ <a href="https://www.unrealircd.com/">UnreadlIRCd</a>,
+ <a href="http://www.bzflag.org/">BZFlag</a>,
+ <a href="http://xymon.sourceforge.net/">Xymon</a>,
+ <a href="http://www.25thandclement.com/~william/projects/libevnet.html">libevnet</a>,
+ <a href="http://glite.web.cern.ch/glite/">gLite</a>,
+ <a href="https://aria2.github.io/">aria2</a>,
+ <a href="http://sipsak.org/">sipsak</a>,
+ <a href="http://secondlife.com/">Second Life</a>,
+ <a href="https://arrow.apache.org/">Apache Arrow</a>
 and more
 
 <p>
