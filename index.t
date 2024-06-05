@@ -25,7 +25,7 @@ BOXTOP
  asynchronous resolution is not necessary to your application.
 
 <p>
- c-ares will build with any C89 compiler, is
+ c-ares will build with any C89 compiler and is
  <a href="/license.html">MIT licensed</a>, which makes it suitable for both free
  and commercial software. c-ares runs on Linux, FreeBSD, OpenBSD, MacOS, Solaris,
  AIX, Windows, Android, iOS and many more operating systems.
