@@ -13,7 +13,7 @@ BOXTOP
 <p>
 A couple of decades ago <a href="https://daniel.haxx.se/">Daniel Stenberg</a>
 started looking for an asynchronous DNS resolver library to use in
-<a href="http://curl.haxx.se/libcurl/">libcurl</a>. Through this process,
+<a href="https://curl.se/libcurl/">libcurl</a>. Through this process,
 someone pointed out the ares library
 (<a href="https://github.com/mit-athena/libares/">archived here</a>)
 and eureka! This was almost exactly what he was looking for, for use in
