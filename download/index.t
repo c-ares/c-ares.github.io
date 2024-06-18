@@ -27,6 +27,9 @@ BOXTOP
 
 <p>
 
+ <a href="https://github.com/c-ares/c-ares/releases/download/v1.31.0/c-ares-1.31.0.tar.gz">c-ares 1.31.0</a> (18-jun-2024)
+<a href="https://github.com/c-ares/c-ares/releases/download/v1.31.0/c-ares-1.31.0.tar.gz.asc">GPG</a> <a href="/changelog.html#1_31_0">Changelog</a>
+<br>
  <a href="https://github.com/c-ares/c-ares/releases/download/v1.30.0/c-ares-1.30.0.tar.gz">c-ares 1.30.0</a> (7-jun-2024)
 <a href="https://github.com/c-ares/c-ares/releases/download/v1.30.0/c-ares-1.30.0.tar.gz.asc">GPG</a> <a href="/changelog.html#1_30_0">Changelog</a>
 <br>
