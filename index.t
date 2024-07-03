@@ -46,8 +46,8 @@ BOXTOP
 
 SUBTITLE(Download)
 <p>
- <a href="https://github.com/c-ares/c-ares/releases/download/v1.31.0/c-ares-1.31.0.tar.gz">c-ares 1.31.0</a> (18-jun-2024)
-<a href="https://github.com/c-ares/c-ares/releases/download/v1.31.0/c-ares-1.31.0.tar.gz.asc">GPG</a> <a href="/changelog.html">Changelog</a>
+ <a href="https://github.com/c-ares/c-ares/releases/download/v1.32.0/c-ares-1.32.0.tar.gz">c-ares 1.32.0</a> (4-jul-2024)
+<a href="https://github.com/c-ares/c-ares/releases/download/v1.32.0/c-ares-1.32.0.tar.gz.asc">GPG</a> <a href="/changelog.html">Changelog</a>
 <p>
  Valid PGP / GPG signing keys for packages are:
  <ul>
