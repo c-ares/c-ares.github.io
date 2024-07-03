@@ -25,6 +25,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Checkout c-ares docs
+        uses: actions/checkout@v4
+        with:
+          repository: c-ares/c-ares
+          path: c-ares.git
+      - name: Checkout roffit
+        uses: actions/checkout@v4
+        with:
+          repository: "bagder/roffit"
+          path: roffit.git
+      - name: Build and Install roffit
+        run: |
+          cd roffit
+          sudo make install
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

@@ -20,8 +20,9 @@ description: >-
   of the underlying DNS protocol. It was originally intended for applications
   which need to perform DNS queries without blocking, or need to perform multiple
   DNS queries in parallel.  
+domain: c-ares.org
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://c-ares.org"
 github_username: c-ares
 
 # Build settings
@@ -33,11 +34,10 @@ plugins:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+ exclude:
+   - Gemfile
+   - Gemfile.lock
+   - c-ares.git
+   - roffit.git
+   - Makefile
+
