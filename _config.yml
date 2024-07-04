@@ -42,3 +42,4 @@ exclude:
   - Makefile
   - docs/*.raw
   - .deps
+  - README.md
