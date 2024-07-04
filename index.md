@@ -1,5 +1,8 @@
 ---
 layout: page
+version:
+  version: 1.32.0
+  date: "4-jul-2024"
 ---
 
 **c-ares** is a modern DNS (stub) resolver library, written in C. It provides
@@ -30,9 +33,9 @@ best practices in regards to C coding standards.
 
 ## Download
 
-[c-ares 1.32.0](https://github.com/c-ares/c-ares/releases/download/v1.32.0/c-ares-1.32.0.tar.gz)
-(4-jul-2024)
-[GPG](https://github.com/c-ares/c-ares/releases/download/v1.32.0/c-ares-1.32.0.tar.gz.asc)
+[c-ares {{ page.version.version }}](https://github.com/c-ares/c-ares/releases/download/v{{ page.version.version }}/c-ares-{{ page.version.version }}.tar.gz)
+({{ page.version.date }})
+[GPG](https://github.com/c-ares/c-ares/releases/download/v{{ page.version.version }}/c-ares-{{ page.version.version }}.tar.gz.asc)
 [Changelog](/changelog.html)
 
 Valid PGP / GPG signing keys for packages are:
