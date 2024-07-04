@@ -40,4 +40,5 @@ exclude:
   - c-ares.git
   - roffit.git
   - Makefile
-
+  - docs/*.raw
+  - .deps
