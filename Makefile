@@ -12,10 +12,10 @@ DEPFILES=$(MANPAGES_NAMES:%.3=$(DEPDIR)/%.d)
 
 PAGES=$(MANPAGES)
 
-$(DEPDIR):
+$(DOCSDEST):
 	mkdir -p $@
 
-$(DOCSDEST):
+$(DEPDIR): $(DOCSDEST)
 	mkdir -p $@
 
 $(DEPDIR)/%.d: $(DOCSDIR)/%.3
@@ -27,9 +27,9 @@ $(DOCSDEST)/%.html: $(DOCSDIR)/%.3 $(DEPDIR)/%.d
 	echo "layout: page" >> $(DOCSDEST)/$*.html
 	echo "---" >> $(DOCSDEST)/$*.html
 	cat $(DOCSDEST)/$*.raw >> $(DOCSDEST)/$*.html
-	rm -f $(DOCSDEST)$*.raw
+	rm -f $(DOCSDEST)/$*.raw
 
-$(DEPFILES): $(DOCSDEST) $(DEPDIR)
+$(DEPFILES): $(DEPDIR)
 
 include $(DEPFILES)
 
@@ -39,6 +39,6 @@ all: $(PAGES)
 
 clean:
 	find . -name "*~" -exec rm {} \;
-	rm -rf $(DOCSDEST)/*.html $(DOCSDEST)/*.raw
+	rm -rf $(MANPAGES) $(DOCSDEST)/*.raw
 	rm -rf $(DEPDIR)
 
