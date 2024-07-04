@@ -1,1 +1,0 @@
-RedirectMatch "^/.git" https://c-ares.org/download/

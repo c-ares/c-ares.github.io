@@ -1,5 +1,10 @@
-*.html
-*.raw
-*.gen
-ares-cvs
+Gemfile.lock
+_site
+.sass-cache
 .deps
+c-ares.git
+roffit.git
+docs
+security.md
+license.md
+
