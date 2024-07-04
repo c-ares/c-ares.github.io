@@ -79,8 +79,8 @@ int main(int argc, char **argv)
     return 1;
   }
 
-  memset(&options, 0, sizeof(options));
   /* Enable event thread so we don't have to monitor file descriptors */
+  memset(&options, 0, sizeof(options));
   optmask      |= ARES_OPT_EVENT_THREAD;
   options.evsys = ARES_EVSYS_DEFAULT;
 
@@ -90,7 +90,6 @@ int main(int argc, char **argv)
     printf("c-ares initialization issue\n");
     return 1;
   }
-
 
   /* Perform an IPv4 and IPv6 request for the provided domain name */
   memset(&hints, 0, sizeof(hints));
