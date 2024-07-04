@@ -1,5 +1,4 @@
 # Welcome to Jekyll!
-#
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing this file very often, consider using Jekyll's data files
@@ -26,7 +25,11 @@ url: "https://c-ares.org"
 github_username: c-ares
 
 # Build settings
-markdown: GFM
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 theme: minima
 plugins:
 #  - jekyll-feed
