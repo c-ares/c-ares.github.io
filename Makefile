@@ -10,7 +10,7 @@ MANPAGES=$(addprefix $(DOCSDEST)/,$(sort $(notdir $(MANPAGES_SRC:.3=.html))))
 MANPAGES_NAMES=$(sort $(notdir $(MANPAGES_SRC)))
 DEPFILES=$(MANPAGES_NAMES:%.3=$(DEPDIR)/%.d)
 
-PAGES=$(MANPAGES)
+PAGES=$(MANPAGES) security.md license.md
 
 $(DOCSDEST):
 	mkdir -p $@
@@ -23,11 +23,17 @@ $(DEPDIR)/%.d: $(DOCSDIR)/%.3
 
 $(DOCSDEST)/%.html: $(DOCSDIR)/%.3 $(DEPDIR)/%.d
 	$(MAN2HTML) < $< > $(DOCSDEST)/$*.raw
-	echo "---" > $(DOCSDEST)/$*.html
-	echo "layout: page" >> $(DOCSDEST)/$*.html
-	echo "---" >> $(DOCSDEST)/$*.html
+	echo "---\nlayout: page\n---" > $(DOCSDEST)/$*.html
 	cat $(DOCSDEST)/$*.raw >> $(DOCSDEST)/$*.html
 	rm -f $(DOCSDEST)/$*.raw
+
+security.md: c-ares.git/SECURITY.md
+	echo "---\nlayout: page\ntitle: \"\"\n---" > $@
+	cat $< >> $@
+
+license.md: c-ares.git/LICENSE.md
+	echo "---\nlayout: page\ntitle: \"\"\nmenu: License\npermalink: /license/\n---" > $@
+	cat $< >> $@
 
 $(DEPFILES): $(DEPDIR)
 
@@ -39,6 +45,6 @@ all: $(PAGES)
 
 clean:
 	find . -name "*~" -exec rm {} \;
-	rm -rf $(MANPAGES) $(DOCSDEST)/*.raw
+	rm -rf $(PAGES) $(DOCSDEST)/*.raw
 	rm -rf $(DEPDIR)
 
