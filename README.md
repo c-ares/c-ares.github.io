@@ -26,7 +26,7 @@ Building:
  2. Inside of `c-ares.github.io `checkout, checkout the
     [c-ares](https://github.com/c-ares/c-ares) source code as `c-ares.git`.
  3. Build external files such as manpages via `make`
- 4. Install Jekyll dependencies for site via (`bundle install`)
+ 4. Install Jekyll dependencies for site (`bundle install`)
  5. Build and self-host test site (`bundle exec jekyll serve -V`)
 
 Example:
