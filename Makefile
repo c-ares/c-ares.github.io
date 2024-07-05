@@ -23,7 +23,7 @@ $(DEPDIR)/%.d: $(DOCSDIR)/%.3
 
 $(DOCSDEST)/%.html: $(DOCSDIR)/%.3 $(DEPDIR)/%.d
 	$(MAN2HTML) < $< > $(DOCSDEST)/$*.raw
-	echo "---\nlayout: page\n---" > $(DOCSDEST)/$*.html
+	echo "---\nlayout: page\ntitle: $*\n---" > $(DOCSDEST)/$*.html
 	cat $(DOCSDEST)/$*.raw >> $(DOCSDEST)/$*.html
 	rm -f $(DOCSDEST)/$*.raw
 
