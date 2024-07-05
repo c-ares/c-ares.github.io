@@ -28,11 +28,11 @@ $(DOCSDEST)/%.html: $(DOCSDIR)/%.3 $(DEPDIR)/%.d
 	rm -f $(DOCSDEST)/$*.raw
 
 security.md: c-ares.git/SECURITY.md
-	echo "---\nlayout: page\ntitle: \"\"\n---" > $@
+	echo "---\nlayout: page\ntitle: \"c-ares Security Policies and Procedures\"\n---" > $@
 	cat $< >> $@
 
 license.md: c-ares.git/LICENSE.md
-	echo "---\nlayout: page\ntitle: \"\"\nmenu: License\n---" > $@
+	echo "---\nlayout: page\ntitle: \"c-ares License\"\nmenu: License\n---" > $@
 	cat $< >> $@
 
 $(DEPFILES): $(DEPDIR)
