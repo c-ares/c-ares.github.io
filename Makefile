@@ -32,7 +32,7 @@ security.md: c-ares.git/SECURITY.md
 	cat $< >> $@
 
 license.md: c-ares.git/LICENSE.md
-	echo "---\nlayout: page\ntitle: \"\"\nmenu: License\npermalink: /license/\n---" > $@
+	echo "---\nlayout: page\ntitle: \"\"\nmenu: License\n---" > $@
 	cat $< >> $@
 
 $(DEPFILES): $(DEPDIR)

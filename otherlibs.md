@@ -1,7 +1,6 @@
 ---
 layout: page
 title: What Other Libraries Are There?
-permalink: /otherlibs/
 menu: Other Libs
 ---
 

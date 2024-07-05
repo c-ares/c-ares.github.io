@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Why does c-ares exist?
-permalink: /why/
 menu: Why
 ---
 
