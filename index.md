@@ -1,8 +1,8 @@
 ---
 layout: page
 version:
-  version: 1.32.0
-  date: "4-jul-2024"
+  version: 1.32.1
+  date: "7-jul-2024"
 ---
 
 **c-ares** is a modern DNS (stub) resolver library, written in C. It provides
