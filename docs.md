@@ -2,7 +2,6 @@
 menu: Docs
 title: c-ares documentation
 layout: page
-permalink: /docs/
 ---
 
 - [Manpages](#manpages)
