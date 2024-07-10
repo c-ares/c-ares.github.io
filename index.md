@@ -25,7 +25,7 @@ c-ares has a strong focus on security, implementing safe parsers and data
 builders used throughout the code, thus avoiding many of the common pitfalls
 of other C libraries.  Through automated testing with our extensive testing
 framework, c-ares is constantly validated with a range of static and dynamic
-analyzers, as well as being constantly fuzzed by [OSS Fuzz](https://github.com/google/oss-fuzz).
+analyzers, as well as being constantly fuzzed by [OSS Fuzz](https://github.com/google/oss-fuzz){:target="_blank"}.
 
 While c-ares has been around for over 20 years, it has been actively maintained
 both in regards to the latest DNS RFCs as well as updated to follow the latest
@@ -47,13 +47,13 @@ You can also [download old packages](/download)
 ## Communication
 
 **Issues** and **Feature Requests** should be reported to our
-[GitHub Issues](https://github.com/c-ares/c-ares/issues) page.
+[GitHub Issues](https://github.com/c-ares/c-ares/issues){:target="_blank"} page.
 
 
 **Discussions** around c-ares and its use are held on
-[GitHub Discussions](https://github.com/c-ares/c-ares/discussions/categories/q-a)
-or the [Mailing List](https://lists.haxx.se/mailman/listinfo/c-ares).
-Mailing list archive [here](https://lists.haxx.se/pipermail/c-ares/).
+[GitHub Discussions](https://github.com/c-ares/c-ares/discussions/categories/q-a){:target="_blank"}
+or the [Mailing List](https://lists.haxx.se/mailman/listinfo/c-ares){:target="_blank"}.
+Mailing list archive [here](https://lists.haxx.se/pipermail/c-ares/){:target="_blank"}.
 Please, do not mail volunteers privately about c-ares.
 
 **Security vulnerabilities** are treated according to our
@@ -63,7 +63,7 @@ please email c-ares-security at haxx.se if you suspect one.
 
 ## Source code
 
-Browse the git repository on [GitHub](https://github.com/c-ares/c-ares).
+Browse the git repository on [GitHub](https://github.com/c-ares/c-ares){:target="_blank"}.
 
 Check out from git like this:
 ```
@@ -73,21 +73,21 @@ git clone https://github.com/c-ares/c-ares.git
 
 ## Who is c-ares?
 
-Contributions have been made by [these friendly people](https://github.com/c-ares/c-ares/blob/master/AUTHORS).
+Contributions have been made by [these friendly people](https://github.com/c-ares/c-ares/blob/master/AUTHORS){:target="_blank"}.
 
 c-ares is being used by:
- - [libcurl](https://curl.haxx.se/libcurl/)
- - [Wireshark](https://www.wireshark.org/)
- - [NodeJS](https://nodejs.org/)
- - [UnrealIRCd](https://www.unrealircd.com/)
- - [BZFlag](http://www.bzflag.org/)
- - [Xymon](http://xymon.sourceforge.net/)
- - [libevnet](http://www.25thandclement.com/~william/projects/libevnet.html)
- - [gLite](http://glite.web.cern.ch/glite/)
- - [aria2](https://aria2.github.io/)
- - [sipsak](http://sipsak.org/)
- - [Second Life](http://secondlife.com/)
- - [Apache Arrow](https://arrow.apache.org/)
+ - [libcurl](https://curl.haxx.se/libcurl/){:target="_blank"}
+ - [Wireshark](https://www.wireshark.org/){:target="_blank"}
+ - [NodeJS](https://nodejs.org/){:target="_blank"}
+ - [UnrealIRCd](https://www.unrealircd.com/){:target="_blank"}
+ - [BZFlag](http://www.bzflag.org/){:target="_blank"}
+ - [Xymon](http://xymon.sourceforge.net/){:target="_blank"}
+ - [libevnet](http://www.25thandclement.com/~william/projects/libevnet.html){:target="_blank"}
+ - [gLite](http://glite.web.cern.ch/glite/){:target="_blank"}
+ - [aria2](https://aria2.github.io/){:target="_blank"}
+ - [sipsak](http://sipsak.org/){:target="_blank"}
+ - [Second Life](http://secondlife.com/){:target="_blank"}
+ - [Apache Arrow](https://arrow.apache.org/){:target="_blank"}
 ... and more
 
 Please let us know if you use it!
