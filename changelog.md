@@ -16,6 +16,7 @@ Bugfixes:
   [59e3a1f4](https://github.com/c-ares/c-ares/commit/59e3a1f4)
 * Windows: use `QueryPerformanceCounters()` instead of `GetTickCount64()` for
   better time accuracy (~15ms -> ~1us).
+  [8a50fc6c](https://github.com/c-ares/c-ares/commit/8a50fc6c)
 * Windows 32bit config change callback needs to be tagged as `stdcall` otherwise
   could result in a crash.
   [5c2bab35](https://github.com/c-ares/c-ares/commit/5c2bab35)
