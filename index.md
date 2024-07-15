@@ -1,9 +1,16 @@
 ---
 layout: page
 version:
-  version: 1.32.1
-  date: "7-jul-2024"
+  version: 1.32.2
+  date: "15-jul-2024"
 ---
+
+- [Download](#download)
+- [Features](#features)
+  - [Supported RFCs and Proposals](#supported-rfcs-and-proposals)
+- [Communication](#communication)
+- [Source code](#source-code)
+- [Who is c-ares?](#who-is-c-ares)
 
 **c-ares** is a modern DNS (stub) resolver library, written in C. It provides
 interfaces for asynchronous queries while trying to abstract the intricacies of
@@ -44,6 +51,48 @@ Valid PGP / GPG signing keys for packages are:
 
 You can also [download old packages](/download)
 
+## Features
+### Supported RFCs and Proposals
+- [RFC1035](https://datatracker.ietf.org/doc/html/rfc7873).
+  Initial/Base DNS RFC
+- [RFC2671](https://datatracker.ietf.org/doc/html/rfc2671),
+  [RFC6891](https://datatracker.ietf.org/doc/html/rfc6891).
+  EDNS0 option (meta-RR)
+- [RFC3596](https://datatracker.ietf.org/doc/html/rfc3596).
+  IPv6 Address. `AAAA` Record.
+- [RFC2782](https://datatracker.ietf.org/doc/html/rfc2782).
+  Server Selection. `SRV` Record.
+- [RFC3403](https://datatracker.ietf.org/doc/html/rfc3403).
+  Naming Authority Pointer. `NAPTR` Record.
+- [RFC6698](https://datatracker.ietf.org/doc/html/rfc6698).
+  DNS-Based Authentication of Named Entities (DANE) Transport Layer Security (TLS) Protocol.
+  `TLSA` Record.
+- [RFC9460](https://datatracker.ietf.org/doc/html/rfc9460).
+  General Purpose Service Binding, Service Binding type for use with HTTPS.
+  `SVCB` and `HTTPS` Records.
+- [RFC7553](https://datatracker.ietf.org/doc/html/rfc7553).
+  Uniform Resource Identifier. `URI` Record.
+- [RFC6844](https://datatracker.ietf.org/doc/html/rfc6844).
+  Certification Authority Authorization. `CAA` Record.
+- [RFC2535](https://datatracker.ietf.org/doc/html/rfc2535),
+  [RFC2931](https://datatracker.ietf.org/doc/html/rfc2931).
+  `SIG0` Record. Only basic parser, not full implementation.
+- [RFC7873](https://datatracker.ietf.org/doc/html/rfc7873),
+  [RFC9018](https://datatracker.ietf.org/doc/html/rfc9018).
+  DNS Cookie off-path dns poisoning and amplification mitigation. *In progress*.
+- [draft-vixie-dnsext-dns0x20-00](https://datatracker.ietf.org/doc/html/draft-vixie-dnsext-dns0x20-00).
+  DNS 0x20 query name case randomization to prevent cache poisioning attacks.
+- [RFC7686](https://datatracker.ietf.org/doc/html/rfc7686).
+  Reject queries for `.onion` domain names with `NXDOMAIN`.
+- [RFC2606](https://datatracker.ietf.org/doc/html/rfc2606),
+  [RFC6761](https://datatracker.ietf.org/doc/html/rfc6761).
+  Special case treatment for `localhost`/`.localhost`.
+- [RFC2308](https://datatracker.ietf.org/doc/html/rfc2308),
+  [RFC9520](https://datatracker.ietf.org/doc/html/rfc9520).
+  Negative Caching of DNS Resolution Failures.
+- [RFC6724](https://datatracker.ietf.org/doc/html/rfc6724).
+  IPv6 address sorting as used by `ares_getaddrinfo()`.
+
 ## Communication
 
 **Issues** and **Feature Requests** should be reported to our
@@ -69,7 +118,6 @@ Check out from git like this:
 ```
 git clone https://github.com/c-ares/c-ares.git
 ```
-
 
 ## Who is c-ares?
 
