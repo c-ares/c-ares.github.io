@@ -34,12 +34,6 @@ versions:
   - version: 1.24.0
     date: "17-dec-2023"
     linkdest: cares
-  - version: 1.25.0
-    date: "3-jan-2024"
-    linkdest: cares
-  - version: 1.24.0
-    date: "17-dec-2023"
-    linkdest: cares
   - version: 1.23.0
     date: "30-nov-2023"
     linkdest: cares
