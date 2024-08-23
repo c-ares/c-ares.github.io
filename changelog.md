@@ -13,7 +13,7 @@ Bugfixes:
   label names.  Also adds test cases to validate the work around works and
   will continue to work in future releases.
   [PR #863](https://github.com/c-ares/c-ares/pull/863),
-  See Also https://github.com/systemd/systemd/issues/34101
+  See Also [systemd/systemd@3401](https://github.com/systemd/systemd/issues/34101)
 * Fix sysconfig ndots default value, also adds containerized test case to
   prevent future regressions.
   [PR #862](https://github.com/c-ares/c-ares/pull/862)
