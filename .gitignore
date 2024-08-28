@@ -2,6 +2,7 @@ Gemfile.lock
 _site
 .sass-cache
 .deps
+.DS_Store
 c-ares.git
 roffit.git
 docs
