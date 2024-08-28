@@ -177,9 +177,11 @@ void process(dnsstate_t *state)
   struct timeval tv;
 
   while (1) {
-    int    rv;
-    int    timeout;
-    size_t i;
+    int            rv;
+    int            timeout;
+    size_t         i;
+    struct pollfd *fds;
+    size_t         nfds;
 
     /* Since we don't have any other program state to wait on, we'll just
      * stop looping when we know there are no remaining queries, which is
@@ -199,18 +201,24 @@ void process(dnsstate_t *state)
       continue;
     }
 
-    for (i=0; i<state->nfds; i++) {
-      if (state->fds[i].revents == 0) {
+    /* Duplicate fds structure as calling into ares_process_fd() may manipulate
+     * the one contained in state */
+    nfds = state->nfds;
+    fds  = malloc(sizeof(*fds) * nfds);
+    memcpy(fds, state->fds, sizeof(*fds) * nfds);
+
+    for (i=0; i<nfds; i++) {
+      if (fds[i].revents == 0) {
         continue;
       }
 
       /* Notify about read/write events per FD */
       ares_process_fd(state->channel,
-        (state->fds[i].revents & (POLLERR|POLLHUP|POLLIN))?
-          state->fds[i].fd:ARES_SOCKET_BAD,
-        (state->fds[i].revents & POLLOUT)?
-          state->fds[i].fd:ARES_SOCKET_BAD);
+        (fds[i].revents & (POLLERR|POLLHUP|POLLIN))?fds[i].fd:ARES_SOCKET_BAD,
+        (fds[i].revents & POLLOUT)?fds[i].fd:ARES_SOCKET_BAD);
     }
+
+    free(fds);
   }
 }
 
