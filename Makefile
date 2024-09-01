@@ -10,7 +10,7 @@ MANPAGES=$(addprefix $(DOCSDEST)/,$(sort $(notdir $(MANPAGES_SRC:.3=.html))))
 MANPAGES_NAMES=$(sort $(notdir $(MANPAGES_SRC)))
 DEPFILES=$(MANPAGES_NAMES:%.3=$(DEPDIR)/%.d)
 
-PAGES=$(MANPAGES) security.md license.md
+PAGES=$(MANPAGES) features.md security.md license.md
 
 $(DOCSDEST):
 	mkdir -p $@
