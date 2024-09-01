@@ -35,6 +35,10 @@ license.md: c-ares.git/LICENSE.md
 	echo "---\nlayout: page\ntitle: \"c-ares License\"\nmenu: License\n---" > $@
 	cat $< >> $@
 
+features.md: c-ares.git/FEATURES.md
+	echo "---\nlayout: page\ntitle: \"\"\nmenu: Features\npermalink: /features/\n---" > $@
+	cat $< >> $@
+
 $(DEPFILES): $(DEPDIR)
 
 include $(DEPFILES)

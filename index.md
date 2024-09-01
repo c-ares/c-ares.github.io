@@ -52,6 +52,9 @@ Valid PGP / GPG signing keys for packages are:
 You can also [download old packages](/download)
 
 ## Features
+
+See [Features](/features)
+
 ### Supported RFCs and Proposals
 - [RFC1035](https://datatracker.ietf.org/doc/html/rfc1035).
   Initial/Base DNS RFC
