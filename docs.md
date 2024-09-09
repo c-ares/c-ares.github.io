@@ -162,10 +162,11 @@ void sock_state_cb(void *data, ares_socket_t socket_fd, int readable, int writab
     }
   }
 
+  /* Update Poll Events (including on Add) */
   state->fds[idx].fd     = socket_fd;
   state->fds[idx].events = 0;
   if (readable) {
-    state->fds[idx].events |= POLL_IN;
+    state->fds[idx].events |= POLLIN;
   }
   if (writable) {
     state->fds[idx].events |= POLLOUT;
