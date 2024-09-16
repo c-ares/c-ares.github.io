@@ -97,6 +97,8 @@ See [Features](/features)
   IPv6 address sorting as used by `ares_getaddrinfo()`.
 - [RFC7413](https://datatracker.ietf.org/doc/html/rfc7413).
   TCP FastOpen (TFO) for 0-RTT TCP Connection Resumption.
+- [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).
+  Uniform Resource Identifier (URI). Used for server configuration.
 
 ## Communication
 
