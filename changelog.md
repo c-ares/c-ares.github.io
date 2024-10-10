@@ -2,6 +2,12 @@
 layout: page
 title: Changelog
 ---
+
+<a name="1_34_1"></a>
+## c-ares version 1.34.1 - Octover 9 2024
+
+This release fixes a packaging issue.
+
 <a name="1_34_0"></a>
 ## c-ares version 1.34.0 - October 9 2024
 
