@@ -4,7 +4,7 @@ title: Changelog
 ---
 
 <a name="1_34_1"></a>
-## c-ares version 1.34.1 - Octover 9 2024
+## c-ares version 1.34.1 - October 9 2024
 
 This release fixes a packaging issue.
 
