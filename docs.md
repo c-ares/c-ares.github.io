@@ -125,9 +125,13 @@ cc -I/usr/local/include -o example_ev example_ev.c -Wl,-rpath /usr/local/lib -lc
 #include <ares.h>
 
 typedef struct {
-  ares_channel_t *channel;
-  struct pollfd  *fds;
-  size_t          nfds;
+  ares_channel_t   *channel;
+  struct pollfd    *poll_fds;
+  size_t            poll_nfds;
+  size_t            poll_fds_alloc;
+
+  ares_fd_events_t *ares_fds;
+  size_t            ares_nfds;
 } dnsstate_t;
 
 void sock_state_cb(void *data, ares_socket_t socket_fd, int readable, int writable)
@@ -136,40 +140,49 @@ void sock_state_cb(void *data, ares_socket_t socket_fd, int readable, int writab
   size_t      idx;
 
   /* Find match */
-  for (idx=0; idx<state->nfds; idx++) {
-    if (state->fds[idx].fd == socket_fd) {
+  for (idx=0; idx<state->poll_nfds; idx++) {
+    if (state->poll_fds[idx].fd == socket_fd) {
       break;
     }
   }
 
   /* Not found */
-  if (idx >= state->nfds) {
+  if (idx >= state->poll_nfds) {
     /* Do nothing */
     if (!readable && !writable) {
       return;
     }
 
     /* Add */
-    state->nfds++;
-    state->fds = realloc(state->fds, sizeof(*state->fds) * state->nfds);
+    state->poll_nfds++;
+    if (state->poll_nfds > state->poll_fds_alloc) {
+      state->poll_fds_alloc = state->poll_nfds;
+
+      state->poll_fds = realloc(state->poll_fds,
+                                sizeof(*state->poll_fds) * state->poll_nfds);
+
+      /* Make the ares_fds the same size */
+      state->ares_fds = realloc(state->ares_fds,
+                                sizeof(*state->ares_fds) * state->poll_nfds);
+    }
   } else {
     /* Remove */
     if (!readable && !writable) {
-      memmove(&state->fds[idx], &state->fds[idx+1],
-        sizeof(*state->fds) * (state->nfds - idx - 1));
-      state->nfds--;
+      memmove(&state->poll_fds[idx], &state->poll_fds[idx+1],
+              sizeof(*state->poll_fds) * (state->poll_nfds - idx - 1));
+      state->poll_nfds--;
       return;
     }
   }
 
   /* Update Poll Events (including on Add) */
-  state->fds[idx].fd     = socket_fd;
-  state->fds[idx].events = 0;
+  state->poll_fds[idx].fd     = socket_fd;
+  state->poll_fds[idx].events = 0;
   if (readable) {
-    state->fds[idx].events |= POLLIN;
+    state->poll_fds[idx].events |= POLLIN;
   }
   if (writable) {
-    state->fds[idx].events |= POLLOUT;
+    state->poll_fds[idx].events |= POLLOUT;
   }
 }
 
@@ -181,8 +194,6 @@ void process(dnsstate_t *state)
     int            rv;
     int            timeout;
     size_t         i;
-    struct pollfd *fds;
-    size_t         nfds;
 
     /* Since we don't have any other program state to wait on, we'll just
      * stop looping when we know there are no remaining queries, which is
@@ -193,7 +204,7 @@ void process(dnsstate_t *state)
 
     timeout = tv.tv_sec * 1000 + tv.tv_usec / 1000;
 
-    rv = poll(state->fds, state->nfds, timeout);
+    rv = poll(state->poll_fds, state->poll_nfds, timeout);
     if (rv < 0) {
       continue;
     } else if (rv == 0) {
@@ -202,24 +213,29 @@ void process(dnsstate_t *state)
       continue;
     }
 
-    /* Duplicate fds structure as calling into ares_process_fd() may manipulate
-     * the one contained in state */
-    nfds = state->nfds;
-    fds  = malloc(sizeof(*fds) * nfds);
-    memcpy(fds, state->fds, sizeof(*fds) * nfds);
-
-    for (i=0; i<nfds; i++) {
-      if (fds[i].revents == 0) {
+    /* Form our notification array */
+    state->ares_nfds = 0;
+    for (i=0; i<state->poll_nfds; i++) {
+      size_t idx;
+      if (state->poll_fds[i].revents == 0) {
         continue;
       }
 
-      /* Notify about read/write events per FD */
-      ares_process_fd(state->channel,
-        (fds[i].revents & (POLLERR|POLLHUP|POLLIN))?fds[i].fd:ARES_SOCKET_BAD,
-        (fds[i].revents & POLLOUT)?fds[i].fd:ARES_SOCKET_BAD);
+      idx = state->ares_nfds++;
+
+      state->ares_fds[idx].fd     = state->poll_fds[i].fd;
+      state->ares_fds[idx].events = 0;
+      if (state->poll_fds[i].revents & (POLLERR|POLLHUP|POLLIN)) {
+        state->ares_fds[idx].events |= ARES_FD_EVENT_READ;
+      }
+      if (state->poll_fds[i].revents & POLLOUT) {
+        state->ares_fds[idx].events |= ARES_FD_EVENT_WRITE;
+      }
     }
 
-    free(fds);
+    /* Notify about read/write events per FD */
+    ares_process_fds(state->channel, state->ares_fds, state->ares_nfds,
+                     ARES_PROCESS_FLAG_NONE);
   }
 }
 
@@ -296,7 +312,8 @@ int main(int argc, char **argv)
 
   /* Cleanup */
   ares_destroy(state.channel);
-  free(state.fds);
+  free(state.poll_fds);
+  free(state.ares_fds);
 
   ares_library_cleanup();
   return 0;
