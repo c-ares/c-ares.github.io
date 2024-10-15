@@ -2,6 +2,12 @@
 layout: page
 title: Changelog
 ---
+<a name="1_34_2"></a>
+## c-ares version 1.34.2 - October 15 2024
+
+This release contains a fix for downstream packages detecting the c-ares
+version based on the contents of the header file rather than the
+distributed pkgconf or cmake files.
 
 <a name="1_34_1"></a>
 ## c-ares version 1.34.1 - October 9 2024
