@@ -45,11 +45,22 @@ best practices in regards to C coding standards.
 [GPG](https://github.com/c-ares/c-ares/releases/download/v{{ page.version.version }}/c-ares-{{ page.version.version }}.tar.gz.asc)
 [Changelog](/changelog.html)
 
+You can also [download old packages](/download)
+
+### PGP / GPG Signatures
+
 Valid PGP / GPG signing keys for packages are:
  - Daniel Stenberg &lt;daniel@haxx.se&gt; - [27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x27edeaf22f3abceb50db9a125cc908fdb71e12c2)
  - Brad House &lt;brad@brad-house.com&gt; - [DA7D64E4C82C6294CB73A20E22E3D13B5411B7CA](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xda7d64e4c82c6294cb73a20e22e3d13b5411b7ca)
 
-You can also [download old packages](/download)
+
+### SLSA Provenance
+This project generates SLSA provenance for its releases! This enables you to
+verify the integrity of the downloaded artifacts and ensure that the release was
+generated from the intended repository.
+
+To verify the provenance of the release, please follow the instructions [here](https://github.com/slsa-framework/slsa-github-generator#verification-of-provenance).
+
 
 ## Features
 
