@@ -168,6 +168,7 @@ c-ares is being used by:
  - [sipsak](http://sipsak.org/){:target="_blank"}
  - [Second Life](http://secondlife.com/){:target="_blank"}
  - [Apache Arrow](https://arrow.apache.org/){:target="_blank"}
+ - [Processing()](https://github.com/NoOrientationProgramming){:target="_blank"}
 ... and more
 
 Please let us know if you use it!
