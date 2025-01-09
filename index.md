@@ -9,6 +9,9 @@ version:
 - [Features](#features)
   - [Supported RFCs and Proposals](#supported-rfcs-and-proposals)
 - [Communication](#communication)
+  - [Issues and Feature Requests](#issues-and-feature-requests)
+  - [Discussions](#discussions)
+  - [Security Vulnerabilities](#security-vulnerabilities)
 - [Source code](#source-code)
 - [Who is c-ares?](#who-is-c-ares)
 
@@ -127,20 +130,25 @@ See [Features](/features)
 
 ## Communication
 
-**Issues** and **Feature Requests** should be reported to our
-[GitHub Issues](https://github.com/c-ares/c-ares/issues){:target="_blank"} page.
+### Issues and Feature requests
 
+Please report to our [GitHub Issues](https://github.com/c-ares/c-ares/issues){:target="_blank"} page.
 
-**Discussions** around c-ares and its use are held on
+### Discussions
+
+Please use
 [GitHub Discussions](https://github.com/c-ares/c-ares/discussions/categories/q-a){:target="_blank"}
 or the [Mailing List](https://lists.haxx.se/mailman/listinfo/c-ares){:target="_blank"}.
 Mailing list archive [here](https://lists.haxx.se/pipermail/c-ares/){:target="_blank"}.
 Please, do not mail volunteers privately about c-ares.
 
-**Security vulnerabilities** are treated according to our
-[security procedure](/security.html),
-please email c-ares-security at haxx.se if you suspect one.
-[Previous security vulnerabilities](/vulns.html).
+### Security Vulnerabilities
+
+Security Vulnerabilities reporting and disclosure are treated according to our
+[security policy and procedure](/security.html), please read that page if you
+plan on submitting a security vulnerability.
+
+Previous security vulnerabilities are listed [here](/vulns.html).
 
 ## Source code
 
