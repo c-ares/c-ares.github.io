@@ -4,7 +4,7 @@ layout: page
 permalink: /download/
 versions:
   - version: 1.34.5
-    date: "8-apr-2024"
+    date: "8-apr-2025"
   - version: 1.34.4
     date: "14-dec-2024"
   - version: 1.34.3
