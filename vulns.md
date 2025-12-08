@@ -5,6 +5,11 @@ title: c-ares vulnerabilities
 
 This is all known and public c-ares vulnerabilities to date. See also our [security incident process](/security.html).
 
+### CVE-2025-62408 - Apr 8 2025
+
+Moderate. A use-after-free bug has been uncovered in read_answers() that was introduced in v1.32.3.
+[CVE-2025-62408](https://github.com/c-ares/c-ares/security/advisories/GHSA-jq53-42q6-pqr5)
+
 ### CVE-2025-31498 - Apr 8 2025
 
 High. A use-after-free bug has been uncovered in read_answers() that was introduced in v1.32.3.
