@@ -176,7 +176,7 @@ c-ares is being used by:
  - [sipsak](http://sipsak.org/){:target="_blank"}
  - [Second Life](http://secondlife.com/){:target="_blank"}
  - [Apache Arrow](https://arrow.apache.org/){:target="_blank"}
- - [NoOrientationProgramming](https://github.com/NoOrientationProgramming){:target="_blank"}
+ - [Fractal Programming](https://github.com/fractal-programming){:target="_blank"}
 ... and more
 
 Please let us know if you use it!
