@@ -1,8 +1,8 @@
 ---
 layout: page
 version:
-  version: 1.34.6
-  date: "8-dec-2025"
+  version: 1.34.7
+  date: "6-jul-2026"
 ---
 
 - [Download](#download)

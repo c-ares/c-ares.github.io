@@ -5,6 +5,18 @@ title: c-ares vulnerabilities
 
 This is all known and public c-ares vulnerabilities to date. See also our [security incident process](/security.html).
 
+### CVE-2026-33630 - Jul 6 2026
+
+High. Use-after-free / double-free in c-ares' query-completion handling, remotely triggerable via `ares_getaddrinfo()` over TCP. Fixed in 1.34.7. [CVE-2026-33630](https://github.com/c-ares/c-ares/security/advisories/GHSA-6wfj-rwm7-3542)
+
+### GHSA-pjmc-gx33-gc76 - Jul 6 2026
+
+High. CPU-exhaustion denial of service via unbounded DNS name compression pointer chains. Fixed in 1.34.7. [GHSA-pjmc-gx33-gc76](https://github.com/c-ares/c-ares/security/advisories/GHSA-pjmc-gx33-gc76)
+
+### GHSA-jv8r-gqr9-68wj - Jul 6 2026
+
+Moderate. Memory-amplification denial of service via unvalidated DNS header record counts. Fixed in 1.34.7. [GHSA-jv8r-gqr9-68wj](https://github.com/c-ares/c-ares/security/advisories/GHSA-jv8r-gqr9-68wj)
+
 ### CVE-2025-62408 - Dec 8 2025
 
 Moderate. A use-after-free bug has been uncovered in read_answers() that was introduced in v1.32.3.
