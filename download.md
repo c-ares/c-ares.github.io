@@ -3,6 +3,8 @@ title: Download c-ares
 layout: page
 permalink: /download/
 versions:
+  - version: 1.34.8
+    date: "7-jul-2026"
   - version: 1.34.7
     date: "6-jul-2026"
   - version: 1.34.6
