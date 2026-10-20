@@ -10,36 +10,36 @@ This is a security release.
 Security:
 * Memory corruption when an application cancels its lookups after a
   connection failure. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-wpr3-8q3r-4q8c
+  [GHSA-wpr3-8q3r-4q8c](https://github.com/c-ares/c-ares/security/advisories/GHSA-wpr3-8q3r-4q8c)
 * A DNS reply that arrived from a different server than the one queried could
   be accepted. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-fqh5-3x7m-wp44
+  [GHSA-fqh5-3x7m-wp44](https://github.com/c-ares/c-ares/security/advisories/GHSA-fqh5-3x7m-wp44)
 * Use-after-free of a lookup after shutting down a failed connection. Please
-  see https://github.com/c-ares/c-ares/security/advisories/GHSA-97vq-4mxv-7vhm
+  see [GHSA-97vq-4mxv-7vhm](https://github.com/c-ares/c-ares/security/advisories/GHSA-97vq-4mxv-7vhm)
 * Use-after-free when an application cancels lookups from a callback, or shuts
   a channel down. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-rf6g-ww74-97qh
+  [GHSA-rf6g-ww74-97qh](https://github.com/c-ares/c-ares/security/advisories/GHSA-rf6g-ww74-97qh)
 * Use-after-free of a connection after the socket-state callback returns.
   Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-mw23-pfg6-2x9r
+  [GHSA-mw23-pfg6-2x9r](https://github.com/c-ares/c-ares/security/advisories/GHSA-mw23-pfg6-2x9r)
 * Use-after-free when an application cancels lookups from a server-state
   callback. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-v33j-65h4-4ch8
+  [GHSA-v33j-65h4-4ch8](https://github.com/c-ares/c-ares/security/advisories/GHSA-v33j-65h4-4ch8)
 * Use-after-free of a server record when an application changes its DNS
   servers from a callback. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-pj7p-v3cw-hq66
+  [GHSA-pj7p-v3cw-hq66](https://github.com/c-ares/c-ares/security/advisories/GHSA-pj7p-v3cw-hq66)
 * Use-after-free of a cached DNS answer while the application is still reading
   it. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-grv7-fq5q-9vfc
+  [GHSA-grv7-fq5q-9vfc](https://github.com/c-ares/c-ares/security/advisories/GHSA-grv7-fq5q-9vfc)
 * Buffer overflow when `ares_dup()` or `ares_save_options()` runs while
   another thread changes the servers. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-ph6c-3cvx-mq6v
+  [GHSA-ph6c-3cvx-mq6v](https://github.com/c-ares/c-ares/security/advisories/GHSA-ph6c-3cvx-mq6v)
 * Uninitialized memory returned for a numeric IPv6 name with a prefix length.
   Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-cfcv-8v2j-qj6r
+  [GHSA-cfcv-8v2j-qj6r](https://github.com/c-ares/c-ares/security/advisories/GHSA-cfcv-8v2j-qj6r)
 * The query cache could return an answer obtained using different EDNS
   options. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-wrgc-prmw-27xh
+  [GHSA-wrgc-prmw-27xh](https://github.com/c-ares/c-ares/security/advisories/GHSA-wrgc-prmw-27xh)
 
 Changes:
 * Answers served from the query cache now report their remaining TTL rather
@@ -131,13 +131,13 @@ This is a security release.
 Security:
 * CVE-2026-33630. Use-after-free / double-free in c-ares' query-completion
   handling, remotely triggerable via ares_getaddrinfo() over TCP. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-6wfj-rwm7-3542
+  [GHSA-6wfj-rwm7-3542](https://github.com/c-ares/c-ares/security/advisories/GHSA-6wfj-rwm7-3542)
 * CPU-exhaustion denial of service via unbounded DNS name compression pointer
   chains. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-pjmc-gx33-gc76
+  [GHSA-pjmc-gx33-gc76](https://github.com/c-ares/c-ares/security/advisories/GHSA-pjmc-gx33-gc76)
 * Memory-amplification denial of service via unvalidated DNS header record
   counts. Please see
-  https://github.com/c-ares/c-ares/security/advisories/GHSA-jv8r-gqr9-68wj
+  [GHSA-jv8r-gqr9-68wj](https://github.com/c-ares/c-ares/security/advisories/GHSA-jv8r-gqr9-68wj)
 
 Changes:
 * `ares_getaddrinfo()`: handle a NULL node per POSIX and implement
@@ -220,7 +220,7 @@ This is a security release.
 
 Security:
 * CVE-2025-62408. A use-after-free bug has been uncovered in read_answers() that
-  was introduced in v1.32.3. Please see https://github.com/c-ares/c-ares/security/advisories/GHSA-jq53-42q6-pqr5
+  was introduced in v1.32.3. Please see [GHSA-jq53-42q6-pqr5](https://github.com/c-ares/c-ares/security/advisories/GHSA-jq53-42q6-pqr5)
 
 Changes:
 * Ignore Windows IDN Search Domains until proper IDN support is added. [PR #1034](https://github.com/c-ares/c-ares/pull/1034)
